@@ -21,7 +21,7 @@ namespace Restarter
         {
             int i;
 
-                using (StreamReader sr = new StreamReader("C:/counter.txt"))
+                using (StreamReader sr = new StreamReader("C:/windows/restart_counter.txt"))
                 {
                     // Read the stream to a string, and write the string to the console.
                     String line = sr.ReadToEnd();
@@ -35,7 +35,7 @@ namespace Restarter
 
             string s = i.ToString();
             byte[] data = Encoding.UTF8.GetBytes(s);
-            string path = @"C:/counter.txt";
+            string path = @"C:/windows/restart_counter.txt";
             FileStream fs = new System.IO.FileStream(path, FileMode.Create);
             fs.Write(data, 0, data.Length);
             fs.Close();
