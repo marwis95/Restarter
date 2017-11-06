@@ -29,7 +29,7 @@ namespace Restarter
 
 
             string[] tab = richTextBox1.Lines;
-            MessageBox.Show("Len: " + tab.Length.ToString());
+            //MessageBox.Show("Len: " + tab.Length.ToString());
 
             for(int j=0; j<tab.Length; j++){
                 if ((tab[j].Contains("[")) && (tab[j].Contains("]")))
@@ -41,7 +41,7 @@ namespace Restarter
             }
 
             i = i + 1;
-            MessageBox.Show(i.ToString());
+            //MessageBox.Show(i.ToString());
 
             richTextBox1.AppendText("\n");
             richTextBox1.AppendText("\n");
@@ -51,14 +51,18 @@ namespace Restarter
 
 
             /*
-            string s = i.ToString();
-            byte[] data = Encoding.UTF8.GetBytes(s);
+            //string s = richTextBox1.Text;
+            byte[] data = Encoding.UTF8.GetBytes(richTextBox1.Text);
             string path = @"C:/windows/restart_counter.txt";
             FileStream fs = new System.IO.FileStream(path, FileMode.Create);
             fs.Write(data, 0, data.Length);
             fs.Close();
-            //this.Close();
              * */
+
+            richTextBox1.SaveFile("C:/windows/restart_counter.txt", RichTextBoxStreamType.PlainText);
+
+            this.Close();
+            
         }
     }
 
