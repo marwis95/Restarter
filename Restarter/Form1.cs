@@ -19,27 +19,38 @@ namespace Restarter
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            int i;
+            int i=0;
+            string wyraz = "";
 
                 using (StreamReader sr = new StreamReader("C:/windows/restart_counter.txt"))
                 {
-                    // Read the stream to a string, and write the string to the console.
-                    String line = sr.ReadToEnd();
-                    i = Int32.Parse(line);
-                    Console.WriteLine(line);
+                    richTextBox1.Text = sr.ReadToEnd();
                 }
 
-            //MessageBox.Show(i.ToString());
-            i = i + 1;
+
+            string[] tab = richTextBox1.Lines;
+            MessageBox.Show("Len: " + tab.Length.ToString());
+
+            for(int j=0; j<tab.Length; j++){
+                if ((tab[j].Contains("[")) && (tab[j].Contains("]")))
+                {
+                    wyraz = tab[j].Substring(1,tab[j].Length-2);
+                    MessageBox.Show(wyraz);
+                }
+
+            }
 
 
+
+            /*
             string s = i.ToString();
             byte[] data = Encoding.UTF8.GetBytes(s);
             string path = @"C:/windows/restart_counter.txt";
             FileStream fs = new System.IO.FileStream(path, FileMode.Create);
             fs.Write(data, 0, data.Length);
             fs.Close();
-            this.Close();
+            //this.Close();
+             * */
         }
     }
 
