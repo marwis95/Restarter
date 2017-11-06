@@ -29,7 +29,7 @@ namespace Restarter
 
 
             string[] tab = richTextBox1.Lines;
-            //MessageBox.Show("Len: " + tab.Length.ToString());
+
 
             for(int j=0; j<tab.Length; j++){
                 if ((tab[j].Contains("[")) && (tab[j].Contains("]")))
@@ -41,7 +41,6 @@ namespace Restarter
             }
 
             i = i + 1;
-            //MessageBox.Show(i.ToString());
 
             richTextBox1.AppendText("\n");
             richTextBox1.AppendText("\n");
@@ -49,15 +48,6 @@ namespace Restarter
             richTextBox1.AppendText("\n");
             richTextBox1.AppendText(DateTime.Now.Day + "." + DateTime.Now.Month + "." + DateTime.Now.Year + "    " + DateTime.Now.Hour + ":" + DateTime.Now.Minute);
 
-
-            /*
-            //string s = richTextBox1.Text;
-            byte[] data = Encoding.UTF8.GetBytes(richTextBox1.Text);
-            string path = @"C:/windows/restart_counter.txt";
-            FileStream fs = new System.IO.FileStream(path, FileMode.Create);
-            fs.Write(data, 0, data.Length);
-            fs.Close();
-             * */
 
             richTextBox1.SaveFile("C:/windows/restart_counter.txt", RichTextBoxStreamType.PlainText);
 
