@@ -35,11 +35,19 @@ namespace Restarter
                 if ((tab[j].Contains("[")) && (tab[j].Contains("]")))
                 {
                     wyraz = tab[j].Substring(1,tab[j].Length-2);
-                    MessageBox.Show(wyraz);
+                    i = Int32.Parse(wyraz);
                 }
 
             }
 
+            i = i + 1;
+            MessageBox.Show(i.ToString());
+
+            richTextBox1.AppendText("\n");
+            richTextBox1.AppendText("\n");
+            richTextBox1.AppendText("[" +  i.ToString() + "]");
+            richTextBox1.AppendText("\n");
+            richTextBox1.AppendText(DateTime.Now.Day + "." + DateTime.Now.Month + "." + DateTime.Now.Year + "    " + DateTime.Now.Hour + ":" + DateTime.Now.Minute);
 
 
             /*
