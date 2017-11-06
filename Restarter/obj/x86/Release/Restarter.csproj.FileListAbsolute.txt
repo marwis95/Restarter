@@ -1,0 +1,7 @@
+C:\Users\Lenovo\Documents\Visual Studio 2010\Projects\Restarter\Restarter\bin\Release\Restarter.exe
+C:\Users\Lenovo\Documents\Visual Studio 2010\Projects\Restarter\Restarter\bin\Release\Restarter.pdb
+C:\Users\Lenovo\Documents\Visual Studio 2010\Projects\Restarter\Restarter\obj\x86\Release\Restarter.Form1.resources
+C:\Users\Lenovo\Documents\Visual Studio 2010\Projects\Restarter\Restarter\obj\x86\Release\Restarter.Properties.Resources.resources
+C:\Users\Lenovo\Documents\Visual Studio 2010\Projects\Restarter\Restarter\obj\x86\Release\Restarter.csproj.GenerateResource.Cache
+C:\Users\Lenovo\Documents\Visual Studio 2010\Projects\Restarter\Restarter\obj\x86\Release\Restarter.exe
+C:\Users\Lenovo\Documents\Visual Studio 2010\Projects\Restarter\Restarter\obj\x86\Release\Restarter.pdb
