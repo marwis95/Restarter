@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.IO;
+using System.Threading;
 
 namespace Restarter
 {
@@ -22,11 +23,22 @@ namespace Restarter
             int i=0;
             string wyraz = "";
 
+            if (File.Exists("C:/windows/restart_counter.txt") == false)
+            {
+                using (FileStream fs = File.Create("C:/windows/restart_counter.txt"))
+                {
+                    Byte[] info = new UTF8Encoding(true).GetBytes("");
+                    fs.Write(info, 0, info.Length);
+                }
+            }
+            else
+            {
+
                 using (StreamReader sr = new StreamReader("C:/windows/restart_counter.txt"))
                 {
                     richTextBox1.Text = sr.ReadToEnd();
                 }
-
+            }
 
             string[] tab = richTextBox1.Lines;
 
@@ -42,12 +54,15 @@ namespace Restarter
 
             i = i + 1;
 
-            richTextBox1.AppendText("\n");
-            richTextBox1.AppendText("\n");
             richTextBox1.AppendText("[" +  i.ToString() + "]");
             richTextBox1.AppendText("\n");
-            richTextBox1.AppendText(DateTime.Now.Day + "." + DateTime.Now.Month + "." + DateTime.Now.Year + "    " + DateTime.Now.Hour + ":" + DateTime.Now.Minute);
+            richTextBox1.AppendText(DateTime.Now.Day + "." + DateTime.Now.Month + "." + DateTime.Now.Year + "    " + 
+                (DateTime.Now.Hour.ToString().Length==1 ? ("0" + DateTime.Now.Hour.ToString()) : (DateTime.Now.Hour.ToString())) + ":" + 
+                (DateTime.Now.Minute.ToString().Length==1 ? ("0" + DateTime.Now.Minute.ToString()) : (DateTime.Now.Minute.ToString())) 
+                );
 
+            richTextBox1.AppendText("\n");
+            richTextBox1.AppendText("\n");
 
             richTextBox1.SaveFile("C:/windows/restart_counter.txt", RichTextBoxStreamType.PlainText);
 
