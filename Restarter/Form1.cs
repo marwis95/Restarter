@@ -60,6 +60,9 @@ namespace Restarter
                 (DateTime.Now.Hour.ToString().Length==1 ? ("0" + DateTime.Now.Hour.ToString()) : (DateTime.Now.Hour.ToString())) + ":" + 
                 (DateTime.Now.Minute.ToString().Length==1 ? ("0" + DateTime.Now.Minute.ToString()) : (DateTime.Now.Minute.ToString())) 
                 );
+            richTextBox1.AppendText("\t");
+            richTextBox1.AppendText(Environment.UserName);
+
 
             richTextBox1.AppendText("\n");
             richTextBox1.AppendText("\n");
