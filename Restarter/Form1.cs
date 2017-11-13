@@ -32,7 +32,7 @@ namespace Restarter
                 }
             }
             else
-            {
+            { 
 
                 using (StreamReader sr = new StreamReader("C:/windows/restart_counter.txt"))
                 {
