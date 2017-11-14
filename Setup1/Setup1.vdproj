@@ -27,6 +27,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_BD9B3395B3384838B8DE08ADC609E606"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_FAD3741A80184236A5381569CFE2B335"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -40,13 +46,19 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_FAD3741A80184236A5381569CFE2B335"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_868D694C356941A08CE6D8AD93A70325"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_FAD3741A80184236A5381569CFE2B335"
+        "OwnerKey" = "8:_BD9B3395B3384838B8DE08ADC609E606"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -74,6 +86,19 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.0,Profile=Client"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4 Client Profile (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.0,Profile=Client"
+                    }
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:Microsoft.Windows.Installer.3.1"
+                    {
+                    "Name" = "8:Windows Installer 3.1"
+                    "ProductCode" = "8:Microsoft.Windows.Installer.3.1"
+                    }
+                }
             }
         }
         "Release"
@@ -118,6 +143,20 @@
     {
         "CustomAction"
         {
+            "{4AA51A2D-7D85-4A59-BA75-B0809FC8B380}:_64EB04296CB445A394A93A2A69AB18E0"
+            {
+            "Name" = "8:MenadzerKomponentowSystemu.exe"
+            "Condition" = "8:"
+            "Object" = "8:_BD9B3395B3384838B8DE08ADC609E606"
+            "FileType" = "3:2"
+            "InstallAction" = "3:2"
+            "Arguments" = "8:"
+            "EntryPoint" = "8:"
+            "Sequence" = "3:1"
+            "Identifier" = "8:_BF4B9C69_0BF6_4CEC_ADFE_519143A56070"
+            "InstallerClass" = "11:FALSE"
+            "CustomActionData" = "8:"
+            }
         }
         "DefaultFeature"
         {
@@ -158,6 +197,37 @@
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_84C8E8CF8864462BB1FEDB2ED44B05EB"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_BD9B3395B3384838B8DE08ADC609E606"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:MenadzerKomponentowSystemu, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_BD9B3395B3384838B8DE08ADC609E606"
+                    {
+                    "Name" = "8:MenadzerKomponentowSystemu.exe"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:..\\MenadzerKomponentowSystemu.exe"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_7481268DF0AF4FA4A50B3106BA5E9713"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -271,7 +341,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Setup1"
         "ProductCode" = "8:{95D5EFDE-F0CE-4B1C-B3FC-5F14794440D8}"
-        "PackageCode" = "8:{C473943E-2AED-45F2-8AF0-5658154B53F2}"
+        "PackageCode" = "8:{CE0FFB5E-42C7-4921-B2B6-9EFFAC78F7C7}"
         "UpgradeCode" = "8:{31FAF397-DEB2-4897-B9CD-2C8020897DF1}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
