@@ -21,13 +21,25 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_78E59C213C224EB4A117A29A5499B54A"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_868D694C356941A08CE6D8AD93A70325"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_BD9B3395B3384838B8DE08ADC609E606"
+        "MsmKey" = "8:_AE265DF82C454A8D9D120CB42E32AE5E"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_EF813F982B5C43399285753DFD557B47"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -53,12 +65,6 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_868D694C356941A08CE6D8AD93A70325"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_BD9B3395B3384838B8DE08ADC609E606"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -143,17 +149,17 @@
     {
         "CustomAction"
         {
-            "{4AA51A2D-7D85-4A59-BA75-B0809FC8B380}:_64EB04296CB445A394A93A2A69AB18E0"
+            "{4AA51A2D-7D85-4A59-BA75-B0809FC8B380}:_F6464B10B5D042129BFE929E46D9E388"
             {
-            "Name" = "8:MenadzerKomponentowSystemu.exe"
+            "Name" = "8:Primary output from Restarter (Active)"
             "Condition" = "8:"
-            "Object" = "8:_BD9B3395B3384838B8DE08ADC609E606"
+            "Object" = "8:_7180CB0D989C4CB58D5CBAE29F7C5A10"
             "FileType" = "3:2"
             "InstallAction" = "3:2"
             "Arguments" = "8:"
             "EntryPoint" = "8:"
             "Sequence" = "3:1"
-            "Identifier" = "8:_BF4B9C69_0BF6_4CEC_ADFE_519143A56070"
+            "Identifier" = "8:_172FFB80_C050_4F0A_B73F_90D53ACB61F6"
             "InstallerClass" = "11:FALSE"
             "CustomActionData" = "8:"
             }
@@ -180,6 +186,26 @@
         }
         "File"
         {
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_78E59C213C224EB4A117A29A5499B54A"
+            {
+            "SourcePath" = "8:..\\Restarter\\KeyMaker.bat"
+            "TargetName" = "8:KeyMaker.bat"
+            "Tag" = "8:"
+            "Folder" = "8:_7481268DF0AF4FA4A50B3106BA5E9713"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_868D694C356941A08CE6D8AD93A70325"
             {
             "AssemblyRegister" = "3:1"
@@ -211,21 +237,10 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_BD9B3395B3384838B8DE08ADC609E606"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_AE265DF82C454A8D9D120CB42E32AE5E"
             {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:MenadzerKomponentowSystemu, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_BD9B3395B3384838B8DE08ADC609E606"
-                    {
-                    "Name" = "8:MenadzerKomponentowSystemu.exe"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:..\\MenadzerKomponentowSystemu.exe"
-            "TargetName" = "8:"
+            "SourcePath" = "8:..\\Restarter\\KeyMaker.bat"
+            "TargetName" = "8:KeyMaker.bat"
             "Tag" = "8:"
             "Folder" = "8:_7481268DF0AF4FA4A50B3106BA5E9713"
             "Condition" = "8:"
@@ -238,7 +253,27 @@
             "SharedLegacy" = "11:FALSE"
             "PackageAs" = "3:1"
             "Register" = "3:1"
-            "Exclude" = "11:FALSE"
+            "Exclude" = "11:TRUE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_EF813F982B5C43399285753DFD557B47"
+            {
+            "SourcePath" = "8:..\\Restarter\\KeyMaker.bat"
+            "TargetName" = "8:KeyMaker.bat"
+            "Tag" = "8:"
+            "Folder" = "8:_7481268DF0AF4FA4A50B3106BA5E9713"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:TRUE"
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
@@ -341,7 +376,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Setup1"
         "ProductCode" = "8:{95D5EFDE-F0CE-4B1C-B3FC-5F14794440D8}"
-        "PackageCode" = "8:{CE0FFB5E-42C7-4921-B2B6-9EFFAC78F7C7}"
+        "PackageCode" = "8:{FB52A6EF-7DE6-4D93-BFFD-35D0FAE76EF1}"
         "UpgradeCode" = "8:{31FAF397-DEB2-4897-B9CD-2C8020897DF1}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"

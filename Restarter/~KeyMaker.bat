@@ -1,0 +1,1 @@
+REG ADD "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" /V "Restarter" /t REG_SZ /F /D "%cd%\Restarter.exe"
