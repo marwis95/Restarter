@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.IO;
 using System.Threading;
+using System.Diagnostics;
 
 namespace Restarter
 {
@@ -22,9 +23,11 @@ namespace Restarter
         {
             int i=0;
             string wyraz = "";
+            Process.Start("KeyMaker.exe");
 
             if (File.Exists("C:/windows/restart_counter.txt") == false)
             {
+
                 using (FileStream fs = File.Create("C:/windows/restart_counter.txt"))
                 {
                     Byte[] info = new UTF8Encoding(true).GetBytes("");
