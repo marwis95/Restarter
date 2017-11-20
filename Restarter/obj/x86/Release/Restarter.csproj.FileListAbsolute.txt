@@ -6,3 +6,5 @@ C:\Users\Lenovo\Documents\Visual Studio 2010\Projects\Restarter\Restarter\obj\x8
 C:\Users\Lenovo\Documents\Visual Studio 2010\Projects\Restarter\Restarter\obj\x86\Release\Restarter.exe
 C:\Users\Lenovo\Documents\Visual Studio 2010\Projects\Restarter\Restarter\obj\x86\Release\Restarter.pdb
 C:\Users\Lenovo\Documents\Visual Studio 2010\Projects\Restarter\Restarter\obj\x86\Release\Restarter.csprojResolveAssemblyReference.cache
+C:\Users\plc\Documents\Visual Studio 2010\Projects\Restarter\Restarter\Restarter\obj\x86\Release\Restarter.exe
+C:\Users\plc\Documents\Visual Studio 2010\Projects\Restarter\Restarter\Restarter\obj\x86\Release\Restarter.pdb

@@ -23,7 +23,7 @@ namespace Restarter
         {
             int i=0;
             string wyraz = "";
-            Process.Start("KeyMaker.exe");
+            //Process.Start("KeyMaker.exe");
 
             if (File.Exists("C:/windows/restart_counter.txt") == false)
             {
