@@ -35,3 +35,5 @@ Name: "{userdesktop}\RestartCounter"; Filename: "{app}\Restarter.exe"
 [Code]
 
 // Place your code here...   
+[Registry]
+Root: HKCU; Subkey: "SOFTWARE\Microsoft\Windows\CurrentVersion\Run"; ValueType: string; ValueName: "RestartCounter"; ValueData: """{app}\Restarter.exe"""; Flags: uninsdeletevalue
