@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Restarter", "Restarter\Restarter.csproj", "{7A6CB084-1F5A-4A7B-90EA-B00DB99668A6}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup1", "Setup1\Setup1.vdproj", "{064661E6-2B8D-48DE-8300-7B2C52BED40A}"
+Project("{3B84926E-F739-4306-9FA2-3627D2E8779A}") = "Setup_Inno", "Setup_Inno\Setup_Inno.innoproj", "{DEDE792B-84C0-4E36-A165-6837C00DF32C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,8 +15,10 @@ Global
 		{7A6CB084-1F5A-4A7B-90EA-B00DB99668A6}.Debug|x86.Build.0 = Debug|x86
 		{7A6CB084-1F5A-4A7B-90EA-B00DB99668A6}.Release|x86.ActiveCfg = Release|x86
 		{7A6CB084-1F5A-4A7B-90EA-B00DB99668A6}.Release|x86.Build.0 = Release|x86
-		{064661E6-2B8D-48DE-8300-7B2C52BED40A}.Debug|x86.ActiveCfg = Debug
-		{064661E6-2B8D-48DE-8300-7B2C52BED40A}.Release|x86.ActiveCfg = Release
+		{DEDE792B-84C0-4E36-A165-6837C00DF32C}.Debug|x86.ActiveCfg = Debug|x86
+		{DEDE792B-84C0-4E36-A165-6837C00DF32C}.Debug|x86.Build.0 = Debug|x86
+		{DEDE792B-84C0-4E36-A165-6837C00DF32C}.Release|x86.ActiveCfg = Release|x86
+		{DEDE792B-84C0-4E36-A165-6837C00DF32C}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

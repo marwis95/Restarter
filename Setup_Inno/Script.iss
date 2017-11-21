@@ -12,21 +12,25 @@
 ;--------------------------------
 
 [Setup]
-AppName=InnoSetupProject1
+AppName=RestartCounter
 AppVersion=1.0
-DefaultDirName={pf}\InnoSetupProject1
-DefaultGroupName=InnoSetupProject1
-UninstallDisplayIcon={app}\InnoSetupProject1.exe
+DefaultDirName={pf}\RestartCounter
+DefaultGroupName=RestartCounter
+UninstallDisplayIcon={app}\Setup_Inno.exe
 Compression=lzma2
 SolidCompression=yes
-OutputDir=Output
-OutputBaseFilename=InnoSetupProject1
+
+OutputBaseFilename=Setup_Inno
 
 [Files]
 Source: "Script.iss"; DestDir: "{app}"
+Source: "..\Restarter\bin\Release\Restarter.exe"; DestDir: "{app}"
+Source: "..\Restarter\bin\Release\Restarter.exe"; DestDir: "{app}"
 
 [Icons]
-Name: "{group}\InnoSetupProject1"; Filename: "{app}\InnoSetupProject1.exe"
+Name: "{group}\Setup_Inno"; Filename: "{app}\Setup_Inno.exe"
+Name: "{group}\RestartCounter"; Filename: "{app}\Restarter.exe"
+Name: "{userdesktop}\RestartCounter"; Filename: "{app}\Restarter.exe"
 
 [Code]
 

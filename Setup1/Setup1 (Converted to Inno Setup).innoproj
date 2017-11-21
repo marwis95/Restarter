@@ -5,10 +5,10 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>1.0</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>85dec1ae-d36b-4443-993e-d8f0b35bd00c</ProjectGuid>
-    <AssemblyName>InnoSetupProject1</AssemblyName>
-    <Name>InnoSetupProject1</Name>
-    <RootNamespace>InnoSetupProject1</RootNamespace>
+    <ProjectGuid>{f220eb03-4c29-40e5-a54f-0786ca60f156}</ProjectGuid>
+    <AssemblyName>Setup1 (Converted to Inno Setup)</AssemblyName>
+    <Name>Setup1 (Converted to Inno Setup)</Name>
+    <RootNamespace>Setup1 (Converted to Inno Setup)</RootNamespace>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <OutputPath>
@@ -25,8 +25,9 @@
     </PostBuildEvent>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Script.iss">
-    </Compile>
+    <Content Include="Setup1.iss">
+      <SubType>Content</SubType>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\VisualInstaller\InnoSetupProject.targets" />
 </Project>
