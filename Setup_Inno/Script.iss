@@ -32,8 +32,20 @@ Name: "{group}\Setup_Inno"; Filename: "{app}\Setup_Inno.exe"
 Name: "{group}\RestartCounter"; Filename: "{app}\Restarter.exe"
 Name: "{userdesktop}\RestartCounter"; Filename: "{app}\Restarter.exe"
 
-[Code]
-
-// Place your code here...   
 [Registry]
 Root: HKCU; Subkey: "SOFTWARE\Microsoft\Windows\CurrentVersion\Run"; ValueType: string; ValueName: "RestartCounter"; ValueData: """{app}\Restarter.exe"""; Flags: uninsdeletevalue
+
+
+[Code]
+
+procedure CurUninstallStepChanged(CurUninstallStep: TUninstallStep);
+begin
+  if CurUninstallStep = usPostUninstall then
+  begin
+    if RegKeyExists(HKEY_CURRENT_USER, '{SOFTWARE\Microsoft\Windows\CurrentVersion\Run\RestartCounter}') then
+      if MsgBox('Do you want to delete the overlay filter registry key ?',
+        mbConfirmation, MB_YESNO) = IDYES
+      then
+        RegDeleteKeyIncludingSubkeys(HKEY_CURRENT_USER, '{SOFTWARE\Microsoft\Windows\CurrentVersion\Run\RestartCounter}');
+  end;
+end;
