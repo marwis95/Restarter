@@ -66,25 +66,18 @@ Root: HKCU; Subkey: "SOFTWARE\Microsoft\Windows\CurrentVersion\Run"; ValueType: 
 
 [Code]
 
-procedure CurUninstallStepChanged(CurUninstallStep: TUninstallStep);
-begin
-  if CurUninstallStep = usPostUninstall then
-  begin
-    if RegKeyExists(HKEY_CURRENT_USER, '{SOFTWARE\Microsoft\Windows\CurrentVersion\Run\RestartCounter}') then
-      if MsgBox('Do you want to delete the overlay filter registry key ?',
-        mbConfirmation, MB_YESNO) = IDYES
-      then
-        RegDeleteKeyIncludingSubkeys(HKEY_CURRENT_USER, '{SOFTWARE\Microsoft\Windows\CurrentVersion\Run\RestartCounter}');
-  end;
-end;
- 
 // Next function is used for proper working of Graphical Installer powered installer
 procedure InitializeWizard();
 begin
     #ifdef GRAPHICAL_INSTALLER_PROJECT
     InitGraphicalInstaller();
     #endif
+
+begin
+MsgBox('Dopisaæ program do autostartu?', mbConfirmation, MB_YESNO or MB_DEFBUTTON1);
 end;
+end;
+
  
 // Next function is used for proper working of Graphical Installer powered installer
 procedure CurPageChanged(CurPageID: Integer);
