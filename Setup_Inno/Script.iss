@@ -50,6 +50,7 @@ OutputBaseFilename=Setup_Inno
 ; Directive "WizardSmallImageBackColor" was modified for purposes of Graphical Installer.
 WizardSmallImageBackColor={#GraphicalInstallerUI}
 
+
 [Files]
 Source: "Script.iss"; DestDir: "{app}"
 Source: "..\Restarter\bin\Release\Restarter.exe"; DestDir: "{app}"
