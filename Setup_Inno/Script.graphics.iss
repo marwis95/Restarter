@@ -23,16 +23,17 @@
 #define public InversedColor "$FFFFFF"
  
 ; Buttons colors
-#define public ButtonNormalColor   "$000000"
-#define public ButtonFocusedColor  "$000000"
-#define public ButtonPressedColor  "$000000"
-#define public ButtonDisabledColor "$000000"
+#define public ButtonNormalColor   "$FFFFFF"
+#define public ButtonFocusedColor  "$FFFFFF"
+#define public ButtonPressedColor  "$FFFFFF"
+#define public ButtonDisabledColor "$FFFFFF"
  
 ; Images - all files must be in the same directory as this .iss file!
 #define public TopPicture    "tlo-top.png"    ; 690x416 px
 #define public InnerPicture  "tlo-inner.png"  ; 413x237 px
 #define public BottomPicture "tlo-bottom.png" ; 690x83 px
 #define public ButtonPicture "button.png" ; 80x136 px
+
  
 ; File with core functions and procedures
 #include "compiler:Graphical Installer\GraphicalInstaller_functions.iss"
@@ -43,6 +44,7 @@ Source: {#TopPicture};    Flags: dontcopy;
 Source: {#InnerPicture};  Flags: dontcopy;
 Source: {#BottomPicture}; Flags: dontcopy;
 Source: {#ButtonPicture}; Flags: dontcopy;
+
 ; DLLs
 Source: compiler:Graphical Installer\InnoCallback.dll; Flags: dontcopy;
 Source: compiler:Graphical Installer\botva2.dll;       Flags: dontcopy;
