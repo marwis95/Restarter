@@ -73,11 +73,22 @@ begin
     InitGraphicalInstaller();
     #endif
 
-begin
-MsgBox('Dopisaæ program do autostartu?', mbConfirmation, MB_YESNO or MB_DEFBUTTON1);
-end;
+//begin
+//MsgBox('Dopisaæ program do autostartu?', mbConfirmation, MB_YESNO or MB_DEFBUTTON1);
+//end;
 end;
 
+procedure CurStepChanged(CurStep: TSetupStep);
+begin
+  if CurStep = ssPostInstall then
+  begin;
+    if MsgBox('Czy chcesz dopisaæ program do autostartu?', mbConfirmation, MB_YESNO) = IDYES then
+    begin
+       //RegWriteStringValue
+	   //(HKEY_CURRENT_USER, 'SOFTWARE\Microsoft\Windows\CurrentVersion\Run','RestartCounter', """{app}\Restarter.exe""")); 
+    end;
+  end;
+end;
  
 // Next function is used for proper working of Graphical Installer powered installer
 procedure CurPageChanged(CurPageID: Integer);
