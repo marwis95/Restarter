@@ -60,8 +60,8 @@ Name: "{group}\Setup_Inno"; Filename: "{app}\Setup_Inno.exe"
 Name: "{group}\RestartCounter"; Filename: "{app}\Restarter.exe"
 Name: "{userdesktop}\RestartCounter"; Filename: "{app}\Restarter.exe"
 
-[Registry]
-Root: HKCU; Subkey: "SOFTWARE\Microsoft\Windows\CurrentVersion\Run"; ValueType: string; ValueName: "RestartCounter"; ValueData: """{app}\Restarter.exe"""; Flags: uninsdeletevalue
+//[Registry]
+//Root: HKCU; Subkey: "SOFTWARE\Microsoft\Windows\CurrentVersion\Run"; ValueType: string; ValueName: "RestartCounter"; ValueData: """{app}\Restarter.exe"""; Flags: uninsdeletevalue
 
 
 [Code]
@@ -84,8 +84,8 @@ begin
   begin;
     if MsgBox('Czy chcesz dopisaæ program do autostartu?', mbConfirmation, MB_YESNO) = IDYES then
     begin
-       //RegWriteStringValue
-	   //(HKEY_CURRENT_USER, 'SOFTWARE\Microsoft\Windows\CurrentVersion\Run','RestartCounter', """{app}\Restarter.exe""")); 
+       RegWriteStringValue
+	   (HKEY_CURRENT_USER, 'SOFTWARE\Microsoft\Windows\CurrentVersion\Run','RestartCounter', ExpandConstant('{app}\Restarter.exe')); 
     end;
   end;
 end;
