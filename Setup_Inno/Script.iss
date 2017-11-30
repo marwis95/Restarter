@@ -50,6 +50,9 @@ OutputBaseFilename=Setup_Inno
 ; Directive "WizardSmallImageBackColor" was modified for purposes of Graphical Installer.
 WizardSmallImageBackColor={#GraphicalInstallerUI}
 
+[Languages]
+Name: "english"; MessagesFile: "compiler:Default.isl"
+Name: "polish"; MessagesFile: "compiler:Languages\Polish.isl"
 
 [Files]
 Source: "Script.iss"; DestDir: "{app}"
@@ -81,14 +84,37 @@ end;
 
 procedure CurStepChanged(CurStep: TSetupStep);
 begin
-  if CurStep = ssPostInstall then
-  begin;
-    if MsgBox('Czy chcesz dopisaæ program do autostartu?', mbConfirmation, MB_YESNO) = IDYES then
-    begin
-       RegWriteStringValue
-	   (HKEY_CURRENT_USER, 'SOFTWARE\Microsoft\Windows\CurrentVersion\Run','RestartCounter', ExpandConstant('{app}\Restarter.exe')); 
-    end;
+
+ 
+  //MsgBox(ExpandConstant('{language}'), mbInformation, MB_OK); 
+
+  if ExpandConstant('{language}') = 'polish' then
+  begin
+	  if CurStep = ssPostInstall then
+	  begin;
+		if MsgBox('Uruchamiaj przy starcie systemu Windows', mbConfirmation, MB_YESNO) = IDYES then
+		begin
+		   RegWriteStringValue
+		   (HKEY_CURRENT_USER, 'SOFTWARE\Microsoft\Windows\CurrentVersion\Run','RestartCounter', ExpandConstant('{app}\Restarter.exe')); 
+		end;
+	  end;
   end;
+
+
+
+  if ExpandConstant('{language}') = 'english' then
+  begin
+	  if CurStep = ssPostInstall then
+	  begin;
+		if MsgBox('Run with starting windows?', mbConfirmation, MB_YESNO) = IDYES then
+		begin
+		   RegWriteStringValue
+		   (HKEY_CURRENT_USER, 'SOFTWARE\Microsoft\Windows\CurrentVersion\Run','RestartCounter', ExpandConstant('{app}\Restarter.exe')); 
+		end;
+	  end;
+  end;
+
+
 end;
  
 // Next function is used for proper working of Graphical Installer powered installer
