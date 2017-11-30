@@ -40,8 +40,8 @@
 [Setup]
 AppName=RestartCounter
 AppVersion=1.0
-DefaultDirName={pf}\RestartCounter
-DefaultGroupName=RestartCounter
+DefaultDirName={pf}\Aumatic\RestartCounter
+DefaultGroupName=Aumatic\RestartCounter
 UninstallDisplayIcon={app}\Setup_Inno.exe
 Compression=lzma2
 SolidCompression=yes
@@ -106,7 +106,7 @@ begin
   begin
 	  if CurStep = ssPostInstall then
 	  begin;
-		if MsgBox('Run with starting windows?', mbConfirmation, MB_YESNO) = IDYES then
+		if MsgBox('Run on startup windows?', mbConfirmation, MB_YESNO) = IDYES then
 		begin
 		   RegWriteStringValue
 		   (HKEY_CURRENT_USER, 'SOFTWARE\Microsoft\Windows\CurrentVersion\Run','RestartCounter', ExpandConstant('{app}\Restarter.exe')); 
